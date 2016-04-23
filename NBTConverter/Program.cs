@@ -128,9 +128,7 @@ namespace DrunkenSquirrel.SquirrelCraft.NBTConverter
         /// <param name="dataRoot"></param>
         /// <returns></returns>
         private static Dictionary<string, int> GetItemDataList(DataNode dataRoot)
-        {
-
-            // TODO: If I ever publish it I should think about making this more flexible.
+        {            
             dataRoot.Expand();
             var fmlNode = dataRoot.Nodes.FirstOrDefault(x => x.NodeName.Contains("FML"));
             if (fmlNode == null)
@@ -186,7 +184,7 @@ namespace DrunkenSquirrel.SquirrelCraft.NBTConverter
                     }
                     else
                     {
-                        Console.WriteLine("Fuck Rockhounding once again");
+                        Console.WriteLine($"Cobbling Rockhounding Block: {kValue}");
                     }
                     
                 }
